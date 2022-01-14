@@ -13,7 +13,7 @@ import {CircularProgress} from "@mui/material";
 import {logoutTC} from "../features/Login/auth-reducer";
 
 type PropsType = {
-    demo?:   boolean
+    demo?: boolean
 }
 
 function App({demo = false}: PropsType) {
