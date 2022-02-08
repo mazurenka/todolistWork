@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-    baseURL: 'https://social-network.samuraijs.com/api/1.1/',
+    baseURL: 'https://social-network.samuraijs.com/api/1.1',
     withCredentials: true,
     headers: {
         'API-KEY': 'b2d25b10-75d3-4d4a-a513-a9de8b4b57cf'
@@ -11,7 +11,8 @@ const instance = axios.create({
 // api
 export const todolistsAPI = {
     getTodolists() {
-        const promise = instance.get<TodolistType[]>('todo-lists');
+        const promise = instance.get<TodolistType[]>('/todo-lists');
+        console.log("test")
         return promise;
     },
     createTodolist(title: string) {

@@ -37,6 +37,7 @@ function App({demo = false}: PropsType) {
         </div>
     }
 
+
     return (
         <BrowserRouter>
             <div className="App">
@@ -67,3 +68,6 @@ function App({demo = false}: PropsType) {
 }
 
 export default App
+
+
+// "homepage": "https://mazurenka.github.io/TL/",

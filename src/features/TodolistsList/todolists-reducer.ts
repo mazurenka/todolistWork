@@ -73,6 +73,9 @@ export const removeTodolistTC = (todolistId: string) => {
                 //скажем глобально приложению, что асинхронная операция завершена
                 dispatch(setAppStatusAC({status: 'succeeded'}))
             })
+            .catch(error => {
+                handleServerNetworkError(error, dispatch)
+            })
     }
 }
 export const addTodolistTC = (title: string) => {
@@ -83,6 +86,9 @@ export const addTodolistTC = (title: string) => {
                 dispatch(addTodolistAC({todolist: res.data.data.item}))
                 dispatch(setAppStatusAC({status: 'succeeded'}))
             })
+            .catch(error => {
+                handleServerNetworkError(error, dispatch)
+            })
     }
 }
 export const changeTodolistTitleTC = (id: string, title: string) => {
@@ -90,6 +96,9 @@ export const changeTodolistTitleTC = (id: string, title: string) => {
         todolistsAPI.updateTodolist(id, title)
             .then((res) => {
                 dispatch(changeTodolistTitleAC({id: id, title}))
+            })
+            .catch(error => {
+                handleServerNetworkError(error, dispatch)
             })
     }
 }
