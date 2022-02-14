@@ -2,7 +2,8 @@ import {
     addTodolistAC,
     AddTodolistActionType,
     removeTodolistAC,
-    RemoveTodolistActionType, setTodolistsAC,
+    RemoveTodolistActionType,
+    setTodolistsAC,
     SetTodolistsActionType
 } from './todolists-reducer'
 import {TaskPriorities, TaskStatuses, TaskType, todolistsAPI, UpdateTaskModelType} from '../../api/todolists-api'
